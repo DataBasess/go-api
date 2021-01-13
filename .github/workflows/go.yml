@@ -17,7 +17,12 @@ jobs:
       uses: actions/setup-go@v2
       with:
         go-version: 1.15
-
+    - name: List
+      run: ls -l /usr/local/go/src/github.com | grep gorilla
+    - name: Workspace
+      run: cd $GOPATH
+    - name: Get
+      run: go get -v -u github.com/gorilla/mux
     - name: Build
       run: go build -v ./...
 
