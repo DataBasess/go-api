@@ -8,7 +8,7 @@ on:
 
 jobs:
 
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -58,4 +58,4 @@ jobs:
           repository: DataBasess/go-api
           tag_with_ref: true
           push: true
-          tags: latest
+          tags: DataBasess/go-api:latest
