@@ -58,4 +58,4 @@ jobs:
           repository: DataBasess/go-api
           tag_with_ref: true
           push: true
-          tags: docker.pkg.github.com/DataBasess/go-api:latest
+          tags: latest
