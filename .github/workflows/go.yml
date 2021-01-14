@@ -49,12 +49,6 @@ jobs:
           registry: docker.pkg.github.com
 
       - name: Build and Push to GitHub Packages
-        uses: docker/build-push-action@v2
-        with:
-          context: .
-          platforms: linux/amd64,linux/arm64,linux/386
-          push: true
-          tags: databasess/go-api:latest
-
-      - name: Image digest
-        run: echo ${{ steps.docker_build.outputs.digest }}
+        run: |
+          docker build --pull --rm -f "Dockerfile" -t docker.pkg.github.com/databess/goapi:latest "."
+          docker push docker.pkg.github.com/databess/goapi:latest
