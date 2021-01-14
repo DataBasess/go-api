@@ -54,8 +54,5 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: docker.pkg.github.com
-          name: Databass/go-api
-          context: .
-          file: ./Dockerfile
-          push: true
-          tags: latest
+          repository: Databass/go-api
+          tag_with_ref: true
