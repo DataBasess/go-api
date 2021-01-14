@@ -50,5 +50,5 @@ jobs:
 
       - name: Build and Push to GitHub Packages
         run: |
-          docker build --pull --rm -f "Dockerfile" -t docker.pkg.github.com/databess/go-api/go-api:latest "."
+          docker build -f "Dockerfile" -t docker.pkg.github.com/databess/go-api/go-api:latest "."
           docker push docker.pkg.github.com/databess/go-api/go-api:latest
