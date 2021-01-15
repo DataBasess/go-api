@@ -1,6 +1,15 @@
-go run main.go
-go build
+# init project
+go mod init go-api
 
-go mod init github.com/callicoder/go-docker
+# install
 go mod download
+
+# add dependencie
 go get -u golang.org/x/lint/golint
+go mod init github.com/callicoder/go-docker
+
+# run project
+go run main.go
+
+# build project
+go build
